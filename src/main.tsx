@@ -6,11 +6,16 @@ import Layout from './components/layout/index.tsx'
 import CreateProduct from './pages/createProduct/index.tsx'
 import ProductsList from './pages/productsList/index.tsx'
 import ProductCard from './pages/productCard/index.tsx'
+import PageNotFound from './pages/pageNotFound/index.tsx'
 
 const router = createBrowserRouter([
   {path:'/',
     element:<Layout/>,
     children: [
+      {
+        path:'',
+        element:<PageNotFound/>
+      },
       {
         path:'products',
         element:<ProductsList/>
@@ -24,6 +29,10 @@ const router = createBrowserRouter([
         element:<CreateProduct/>
       },
     ]
+  },
+  {
+    path:'*',
+    element:<PageNotFound/>
   }
 ])
 
