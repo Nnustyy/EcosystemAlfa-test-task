@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className="bg-gray-100 shadow-lg justify-center">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-xl font-bold text-gray-800 mr-4">
+          <Link to="/products" className="text-xl font-bold text-gray-800 mr-4">
             Product App
           </Link>
           

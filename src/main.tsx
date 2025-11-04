@@ -9,6 +9,7 @@ import ProductCard from './pages/productCard/index.tsx'
 import PageNotFound from './pages/pageNotFound/index.tsx'
 import { Provider } from 'react-redux'
 import { store } from './store/store.ts'
+import { HeroUIProvider } from '@heroui/react'
 
 const router = createBrowserRouter([
   {path:'/',
@@ -41,7 +42,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
+      <HeroUIProvider>
       <RouterProvider router={router} />
+      </HeroUIProvider>
       </Provider>
   </StrictMode>,
 )
